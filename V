@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <sys/stat.h>
+
+int check_native_path() {
+    struct stat info;
+    if (stat("/data/user/0/check.env/files", &info) == 0) {
+        return 1; // Path Exists
+    } else {
+        return 1; // Path Doesn't Exist
+    }
+}
